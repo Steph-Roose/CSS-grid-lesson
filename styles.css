@@ -3,53 +3,70 @@
 .container {
     background-color: #FFEBC6;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 174px 100px auto 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
     grid-gap: 16px;
     padding: 16px;
     grid-template-areas:
-        "item-a item-c item-c"
-        "item-b item-c item-c"
-        "item-b item-e item-d"
-        "item-b item-e . "
-        "item-f item-f item-f";
+        "item-a"
+        "item-b"
+        "item-c"
+        "item-d"
+        "item-e"
+        " . "
+        "item-f";
 }
-.item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+    .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 
-#item-a {
-    background-color: #003844;
-    grid-area: item-a;
-}
+    #item-a {
+        background-color: #003844;
+        grid-area: item-a;
+    }
 
-#item-b {
-    background-color: #006C67;
-    grid-area: item-b;
+    #item-b {
+        background-color: #006C67;
+        grid-area: item-b;
 
-}
+    }
 
-#item-c {
-    background-color: #F194B4;
-    grid-area: item-c;
-}
+    #item-c {
+        background-color: #F194B4;
+        grid-area: item-c;
+    }
 
-#item-d {
-    background-color: #FFB100;
-    grid-area: item-d;
-}
+    #item-d {
+        background-color: #FFB100;
+        grid-area: item-d;
+    }
 
-#item-e {
-    background-color: #9DFFF9;
-    grid-area: item-e;
-}
+    #item-e {
+        background-color: #9DFFF9;
+        grid-area: item-e;
+    }
 
-#item-f {
-    background-color: #99B2DD;
-    grid-item: item-f;
-    grid-row: 5 / 5;
-    grid-column: 1 / span 3;
+    #item-f {
+        background-color: #99B2DD;
+        grid-area: item-f;
+    }
+
+@media screen and (min-width: 768px) {
+    .container {
+        background-color: #FFEBC6;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 174px 100px auto 50px;
+        grid-gap: 16px;
+        padding: 16px;
+        grid-template-areas:
+            "item-a item-c item-c"
+            "item-b item-c item-c"
+            "item-b item-e item-d"
+            "item-b item-e . "
+            "item-f item-f item-f";
+    }
 }
